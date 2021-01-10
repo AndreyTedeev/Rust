@@ -1,3 +1,5 @@
+use std::io::stdin;
+
 fn main() {
     let count = 5;
     for i in 0..count {
@@ -5,7 +7,7 @@ fn main() {
     }
     println!("\nPress ENTER to exit");
     let mut s = String::new();
-    match std::io::stdin().read_line(&mut s) {
+    match stdin().read_line(&mut s) {
         Ok(_) => println!("{}", s),
         Err(error) => println!("{}", error),
     };
